@@ -1,0 +1,15 @@
+#visionboard {
+    position:absolute; 
+    width:100vw; 
+    height:100vh; 
+    z-index:0;
+}
+
+@media only screen and (max-width: 600px) {
+    #visionboard {
+      width: 1200;
+      position:relative;
+      left: -45vw;
+    }
+  }
+
