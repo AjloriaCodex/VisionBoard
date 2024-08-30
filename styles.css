@@ -4,6 +4,41 @@
     height:100vh; 
     z-index:0;
 }
+html, body {
+
+    overflow-y: hidden; /* To prevent horizontal scrolling if needed */
+}
+.spinner {
+    border: 4px solid rgb(192, 180, 161);
+    border-left-color: #3d3d3d;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Image container */
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+/* Hide the spinner once the image is loaded */
+img.loaded + .spinner {
+    display: none;
+}
+
+
 
 @media only screen and (max-width: 600px) {
     #visionboard {
